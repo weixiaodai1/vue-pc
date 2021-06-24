@@ -30,7 +30,7 @@
         <p class="tenant">租户申请</p>
       </el-form>
     </div>
-    <div class="bottom-title">启明信息技术股份有限公司版权所有&nbsp;&nbsp;&nbsp;&nbsp;吉ICP备05000428号-9</div>
+    <div class="bottom-title">daidaidai</div>
 
   </div>
 </template>
