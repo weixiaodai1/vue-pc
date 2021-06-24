@@ -1,6 +1,6 @@
 <template>
   <div class="login-wrap">
-    <div class="ms-title">启明云仓cWIS仓储智能系统</div>
+    <div class="ms-title">WMS系统</div>
 
     <div class="ms-login">
       <!--<div class="box-title">用户名登录</div>-->
