@@ -1,6 +1,6 @@
 <template>
   <div class="login-wrap">
-    <div class="ms-title">WMS系统</div>
+    <div class="ms-title">启明WMS系统-vue</div>
 
     <div class="ms-login">
       <!--<div class="box-title">用户名登录</div>-->
@@ -30,12 +30,13 @@
         <p class="tenant">租户申请</p>
       </el-form>
     </div>
-    <div class="bottom-title">daidaidai</div>
+    <div class="bottom-title">daixiaowei</div>
 
   </div>
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -54,15 +55,41 @@ export default {
     };
   },
   created() {
-    this.$store.commit("clearTags");
+    //this.$store.commit("clearTags");
   },
   methods: {
-    submitForm() {
+     submitForm() {
+
       this.$refs.login.validate(valid => {
         if (valid) {
-          this.$message.success("登录成功");
-          localStorage.setItem("ms_username", this.param.username);
-          this.$router.push("/");
+          try {
+             this.$store.dispatch("user/login", {
+              serviceName: "FusionCoreService",
+              methodName: "doLogin",
+              client: "800",
+              userName: "SUPER",
+              language: "zh_CN",
+              guid: "3f21005f-bd02-4393-86e0-5e873dd5f67d",
+              paraValues: {
+                userName: this.username,
+                password: this.password,
+                onlineContinue: "true",
+                client: "800",
+                language: "zh_CN",
+                pwdEncode: false,
+                devMode: true,
+                isMobile: true
+              }
+            })
+            this.$message.success("登录成功");
+            localStorage.setItem("ms_username", this.param.username);
+            this.$router.push("/");
+          } catch (error) {
+             this.$store.dispatch("user/logout");
+          } finally {
+            this.loading = false;
+          }
+
         } else {
           this.$message.error("请输入账号和密码");
           return false;
