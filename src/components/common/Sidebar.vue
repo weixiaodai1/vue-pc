@@ -62,23 +62,13 @@ export default {
               title: "系统首页"
             },
               {
-                icon: "el-icon-lx-cascades",
-                index: "table",
-                title: "基础表格"
-              },
-              {
-                icon: "el-icon-lx-copy",
-                index: "tabs",
-                title: "tab选项卡"
-              },
-              {
                 icon: "el-icon-lx-calendar",
                 index: "3",
-                title: "表单相关",
+                title: "菜单",
                 subs: [
                   {
-                    index: "form",
-                    title: "基本表单"
+                    index: "table",
+                    title: "库区维护"
                   },
                   {
                     index: "3-2",

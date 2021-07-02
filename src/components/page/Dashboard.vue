@@ -148,7 +148,6 @@ export default {
         myChart.setOption(this.options1);
       },
       drawLPie(){
-        debugger
         let myChart = this.$echarts.init(document.getElementById("charts2"));
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(this.options2);

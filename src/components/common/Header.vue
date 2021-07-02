@@ -15,9 +15,9 @@
                     </el-tooltip>
                 </div>
               <el-dropdown trigger="click">
-              <span class="el-dropdown-link">
-                仓库<i class="el-icon-arrow-down el-icon--right"></i>
-              </span>
+                <span class="el-dropdown-link">
+                  仓库<i class="el-icon-arrow-down el-icon--right"></i>
+                </span>
                 <template #dropdown>
                   <el-dropdown-menu>
                     <el-dropdown-item>仓库1</el-dropdown-item>
